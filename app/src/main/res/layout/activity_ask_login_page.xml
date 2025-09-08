@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AskLoginPage"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/socially"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/socially"
+        android:textColor="@color/barkhandi"
+        android:textSize="48sp"
+        android:fontFamily="@font/poppinssemibold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="40dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@color/barkhandi"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/socially"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@android:color/black"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/userNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_name"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppinssemibold"
+        android:layout_below="@+id/dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinssemibold"
+        android:layout_below="@+id/userNameText"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/button_border_login"/>
+
+    <TextView
+        android:id="@+id/switchAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_account"
+        android:textColor="@color/barkhandi"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppinssemibold"
+        android:layout_below="@+id/loginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+    <View
+        android:id="@+id/dividerLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/whitishgrey"
+        android:layout_below="@+id/switchAccount"
+        android:layout_marginTop="130dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/donthaveaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dont_have_account"
+            android:textColor="@color/lightmehroon"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginEnd="4dp"/>
+        <TextView
+            android:id="@+id/signupButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textColor="@color/barkhandi"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppinssemibold"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+</RelativeLayout>

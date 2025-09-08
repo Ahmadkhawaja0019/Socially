@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Socially</string>
+    <string name="from">from</string>
+    <string name="SMD">SMD</string>
+    <string name="back_button">Back button</string>
+    <string name="socially">Socially</string>
+    <string name="hintText">Create An Account and Sign Up</string>
+    <string name="userNameText">Username</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="firstNameText">First Name</string>
+    <string name="Ahmad">Ahmad</string>
+    <string name="lastNameText">Last Name</string>
+    <string name="Khawaja">Khawaja</string>
+    <string name="dateofbirth">Date of Birth</string>
+    <string name="doptext">21-08-2002</string>
+    <string name="emailText">E-mail</string>
+    <string name="emailHint">Enter E-mail</string>
+    <string name="passwordText">********</string>
+    <string name="password">Password</string>
+    <string name="createAccount">Create an Account</string>
+    <string name="user_name">user_name</string>
+    <string name="login">Log in</string>
+    <string name="switch_account">Switch accounts</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up.</string>
+    <string name="Forgot_password">Forgot password?</string>
+    <string name="or">or</string>
+</resources>
