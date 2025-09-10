@@ -81,7 +81,7 @@
         android:id="@+id/messageTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2:30 PM"
+        android:text="@string/time"
         android:textSize="12sp"
         android:textColor="@color/grey"
         android:fontFamily="@font/poppinsregular"
@@ -89,7 +89,6 @@
         android:layout_above="@+id/sampleMessage"
         android:layout_marginBottom="40dp"/>
 
-    <!-- Sample message -->
     <TextView
         android:id="@+id/sampleMessage"
         android:layout_width="wrap_content"
@@ -104,8 +103,6 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"/>
 
-
-    <!-- Bottom EditText Layout -->
     <RelativeLayout
         android:id="@+id/bottomMessageLayout"
         android:layout_width="match_parent"
@@ -133,7 +130,6 @@
             android:gravity="center_vertical"
             android:autofillHints="message"/>
 
-        <!-- Left side camera icon -->
         <ImageButton
             android:id="@+id/cameraIcon"
             android:layout_width="30dp"
@@ -145,8 +141,6 @@
             android:layout_marginStart="12dp"
             android:contentDescription="Camera"/>
 
-
-        <!-- Right side icons (from right to left: smiley, gallery, microphone) -->
         <ImageButton
             android:id="@+id/smileyIcon"
             android:layout_width="24dp"

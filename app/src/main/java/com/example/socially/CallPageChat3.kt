@@ -9,21 +9,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class Chat1Page : AppCompatActivity() {
+class CallPageChat3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_chat1_page)
+        setContentView(R.layout.activity_call_page_chat3)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val backButton = findViewById<ImageButton>(R.id.back_button)
-        val callButton = findViewById<ImageButton>(R.id.ic_call)
+        val endCall = findViewById<ImageButton>(R.id.endCallButton)
 
-        backButton.setOnClickListener {
-            val intent = Intent(this@Chat1Page, DirectMessage::class.java).apply {
+        endCall.setOnClickListener {
+            val intent = Intent(this@CallPageChat3, Chat3Page::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             }
             startActivity(intent)
@@ -31,16 +30,12 @@ class Chat1Page : AppCompatActivity() {
         }
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                val intent = Intent(this@Chat1Page, DirectMessage::class.java).apply {
+                val intent = Intent(this@CallPageChat3, Chat3Page::class.java).apply {
                     addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
                 }
                 startActivity(intent)
                 finish()
             }
         })
-        callButton.setOnClickListener {
-            val intent = Intent(this@Chat1Page, CallPageChat1::class.java)
-            startActivity(intent)
-        }
     }
 }

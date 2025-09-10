@@ -25,6 +25,7 @@ class ExplorePage : AppCompatActivity() {
         val dp = findViewById<CircleImageView>(R.id.profile_pic_bottom)
         val searchBar = findViewById<TextView>(R.id.searchBar)
 
+        val receivedUsername = intent.getStringExtra("username")
         val dpUriString = intent.getStringExtra("dpUri")
 
         dpUriString?.let {
@@ -34,11 +35,13 @@ class ExplorePage : AppCompatActivity() {
         home.setOnClickListener {
             val intent = Intent(this, HomePage::class.java)
             intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
             startActivity(intent)
         }
 
         searchBar.setOnClickListener {
             val intent = Intent(this, SearchPage::class.java)
+            intent.putExtra("username", receivedUsername)
             startActivity(intent)
         }
     }

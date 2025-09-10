@@ -79,4 +79,6 @@
     <string name="warning">warning button</string>
     <string name="Message">Message...</string>
     <string name="hello">helloooo</string>
+    <string name="time">2:30</string>
+    <string name="johnsmith">john</string>
 </resources>

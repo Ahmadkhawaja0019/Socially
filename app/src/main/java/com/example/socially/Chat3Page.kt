@@ -20,6 +20,8 @@ class Chat3Page : AppCompatActivity() {
             insets
         }
         val backButton = findViewById<ImageButton>(R.id.back_button)
+        val callButton = findViewById<ImageButton>(R.id.ic_call)
+
         backButton.setOnClickListener {
             val intent = Intent(this@Chat3Page, DirectMessage::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
@@ -36,5 +38,9 @@ class Chat3Page : AppCompatActivity() {
                 finish()
             }
         })
+        callButton.setOnClickListener {
+            val intent = Intent(this@Chat3Page, CallPageChat3::class.java)
+            startActivity(intent)
+        }
     }
 }

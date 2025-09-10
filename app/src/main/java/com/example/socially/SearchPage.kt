@@ -18,12 +18,14 @@ class SearchPage : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val receivedUsername = intent.getStringExtra("username")
 
         // Handle system back (button and gesture) to return to ExplorePage and clear this activity
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 val intent = Intent(this@SearchPage, ExplorePage::class.java).apply {
                     addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    intent.putExtra("username", receivedUsername)
                 }
                 startActivity(intent)
                 finish()

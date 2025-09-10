@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Socially">
         <activity
+            android:name=".CallPageChat3"
+            android:exported="false" />
+        <activity
+            android:name=".CallPageChat2"
+            android:exported="false" />
+        <activity
+            android:name=".CallPageChat1"
+            android:exported="false" />
+        <activity
             android:name=".Chat3Page"
             android:exported="false" />
         <activity

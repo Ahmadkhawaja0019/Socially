@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CallPageChat1"
+    android:background="@color/lightmehroon">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/story_pic3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="120dp"/>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/simran"
+        android:layout_below="@+id/pic"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppinssemibold"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/callTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:textSize="16sp"
+        android:textColor="@color/darkgrey"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/name"
+        android:layout_marginBottom="200dp"/>
+
+    <ImageButton
+        android:id="@+id/endCallButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_end_call"
+        android:layout_below="@+id/callTime"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:id="@+id/volumeButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_volume"
+        android:layout_below="@+id/callTime"
+        android:layout_toRightOf="@id/endCallButton"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="24dp"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:id="@+id/notesButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_notes"
+        android:layout_below="@+id/callTime"
+        android:layout_toLeftOf="@id/endCallButton"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/transparent"/>
+
+</RelativeLayout>

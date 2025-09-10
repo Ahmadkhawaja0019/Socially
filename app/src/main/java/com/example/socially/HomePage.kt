@@ -39,6 +39,7 @@ class HomePage : AppCompatActivity() {
         exploreButton.setOnClickListener {
             val intent = Intent(this, ExplorePage::class.java)
             intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
             startActivity(intent)
         }
         dm.setOnClickListener {
