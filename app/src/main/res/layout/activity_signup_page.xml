@@ -2,10 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignupPage"
+    android:id="@+id/main"
     android:background="@color/barkhandi">
 
     <ImageButton
@@ -14,7 +14,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="32dp"
         android:layout_marginStart="10dp"
-        android:src="@drawable/back_button"
+        android:src="@drawable/back_button_full_arrow"
         android:background="@android:color/transparent"
         android:contentDescription="@string/back_button"
         android:layout_alignParentStart="true"
@@ -33,10 +33,10 @@
         android:layout_marginTop="24dp"/>
 
     <TextView
-        android:id="@+id/hintText"
+        android:id="@+id/createAccountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hintText"
+        android:text="@string/createAccountText"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:fontFamily="@font/poppinsregular"
@@ -48,27 +48,29 @@
         android:id="@+id/dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/camera"
+        android:src="@drawable/add_a_photo"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/hintText"
+        android:layout_below="@+id/createAccountText"
         app:civ_border_width="2dp"
         app:civ_border_color="@android:color/black" />
+
     <TextView
         android:id="@+id/userNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/userNameText"
+        android:text="@string/userName"
         android:textColor="@android:color/white"
         android:textSize="15sp"
         android:fontFamily="@font/poppinssemibold"
         android:layout_below="@+id/dp"
         android:layout_marginStart="20dp"/>
+
     <EditText
         android:id="@+id/userNameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        android:hint="@string/enter_name"
+        android:hint="@string/enter_username"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/darker_gray"
         android:fontFamily="@font/poppinsregular"
@@ -77,16 +79,18 @@
         android:layout_marginEnd="16dp"
         android:inputType="text"
         android:layout_below="@id/userNameText"/>
+
     <TextView
         android:id="@+id/firstNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/firstNameText"
+        android:text="@string/firstName"
         android:textColor="@android:color/white"
         android:textSize="15sp"
         android:fontFamily="@font/poppinssemibold"
         android:layout_below="@+id/userNameInput"
         android:layout_marginStart="20dp"/>
+
     <EditText
         android:id="@+id/firstNameInput"
         android:layout_width="match_parent"
@@ -101,16 +105,18 @@
         android:layout_marginEnd="16dp"
         android:inputType="text"
         android:layout_below="@id/firstNameText"/>
+
     <TextView
         android:id="@+id/lastNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/lastNameText"
+        android:text="@string/lastName"
         android:textColor="@android:color/white"
         android:textSize="15sp"
         android:fontFamily="@font/poppinssemibold"
         android:layout_below="@+id/firstNameInput"
         android:layout_marginStart="20dp"/>
+
     <EditText
         android:id="@+id/lastNameInput"
         android:layout_width="match_parent"
@@ -142,7 +148,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        android:hint="@string/doptext"
+        android:hint="@string/dobtext"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/darker_gray"
         android:fontFamily="@font/poppinsregular"
@@ -216,6 +222,6 @@
         android:layout_below="@+id/passInput"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="10dp"
-        android:background="@drawable/button_border_create_account"/>
+        android:background="@drawable/button_background_lightmehroon"/>
 
 </RelativeLayout>

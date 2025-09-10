@@ -22,6 +22,7 @@ class SignupPage : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         val backButton = findViewById<android.widget.ImageButton>(R.id.back_button)
         val dp = findViewById<CircleImageView>(R.id.dp)
         val userName = findViewById<EditText>(R.id.userNameInput)
@@ -37,6 +38,7 @@ class SignupPage : AppCompatActivity() {
         }
 
         var selectedDpUri: android.net.Uri? = null
+
         var launcher = registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()){
             if(it.resultCode == RESULT_OK){

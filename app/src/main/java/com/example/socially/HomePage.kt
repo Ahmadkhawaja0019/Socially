@@ -1,10 +1,14 @@
 package com.example.socially
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import de.hdodenhof.circleimageview.CircleImageView
 
 class HomePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +20,31 @@ class HomePage : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val dp1 = findViewById<CircleImageView>(R.id.story_1)
+        val dp2 = findViewById<CircleImageView>(R.id.profile_pic2)
+        val exploreButton = findViewById<ImageButton>(R.id.nav_search)
+
+        val dpUriString = intent.getStringExtra("dpUri")
+
+        dpUriString?.let {
+            dp1.setImageURI(android.net.Uri.parse(it))
+        }
+
+        dpUriString?.let {
+            dp2.setImageURI(android.net.Uri.parse(it))
+        }
+
+        exploreButton.setOnClickListener {
+            val intent = Intent(this, ExplorePage::class.java)
+            intent.putExtra("dpUri", dpUriString)
+            startActivity(intent)
+        }
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                finishAffinity()
+            }
+        })
     }
 }

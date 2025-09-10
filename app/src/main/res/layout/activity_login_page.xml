@@ -9,19 +9,19 @@
     android:background="@color/white">
 
     <ImageButton
-        android:id="@+id/half_back_button"
+        android:id="@+id/back_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="32dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/half_back_button"
+        android:src="@drawable/back_button_half_arrow"
         android:background="@android:color/transparent"
         android:contentDescription="@string/back_button"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"/>
 
     <TextView
-        android:id="@+id/socially"
+        android:id="@+id/sociallyTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/socially"
@@ -43,11 +43,11 @@
         android:textColorHint="@android:color/darker_gray"
         android:fontFamily="@font/poppinsregular"
         android:layout_marginStart="16dp"
-        android:background="@drawable/edit_text_background"
+        android:background="@drawable/edittext_background_grey"
         android:layout_marginEnd="16dp"
         android:inputType="text"
         android:layout_marginBottom="14dp"
-        android:layout_below="@id/socially"/>
+        android:layout_below="@id/sociallyTop"/>
 
     <EditText
         android:id="@+id/passInput"
@@ -59,7 +59,7 @@
         android:textColorHint="@android:color/darker_gray"
         android:fontFamily="@font/poppinsregular"
         android:layout_marginStart="16dp"
-        android:background="@drawable/edit_text_background"
+        android:background="@drawable/edittext_background_grey"
         android:layout_marginEnd="16dp"
         android:inputType="text"
         android:layout_marginBottom="14dp"
@@ -89,7 +89,7 @@
         android:layout_below="@+id/forgotPassword"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/button_border_login_lightmehroon"/>
+        android:background="@drawable/button_background_lightmehroon"/>
 
     <LinearLayout
         android:id="@+id/gapLines"
@@ -122,6 +122,7 @@
             android:layout_height="2dp"
             android:layout_weight="1"
             android:background="@color/whitishgrey"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -162,7 +163,7 @@
         android:layout_marginHorizontal="50dp"/>
 
     <TextView
-        android:id="@+id/sociallybottom"
+        android:id="@+id/sociallyBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/socially"
@@ -172,4 +173,5 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"/>
+
 </RelativeLayout>

@@ -2,11 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AskLoginPage"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:id="@+id/main">
 
     <TextView
         android:id="@+id/socially"
@@ -25,11 +25,11 @@
         android:id="@+id/dp"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@color/barkhandi"
+        android:src="@drawable/default_avatar"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/socially"
         app:civ_border_width="2dp"
-        app:civ_border_color="@android:color/black"
+        app:civ_border_color="@color/whitishgrey"
         android:layout_marginBottom="10dp"/>
 
     <TextView
@@ -55,7 +55,7 @@
         android:layout_below="@+id/userNameText"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="20dp"
-        android:background="@drawable/button_border_login"/>
+        android:background="@drawable/button_background_barkhandi"/>
 
     <TextView
         android:id="@+id/switchAccount"
@@ -104,4 +104,5 @@
             android:fontFamily="@font/poppinssemibold"
             android:layout_marginStart="4dp"/>
     </LinearLayout>
+
 </RelativeLayout>

@@ -20,6 +20,7 @@ class SplashActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, SignupPage::class.java)
             startActivity(intent)

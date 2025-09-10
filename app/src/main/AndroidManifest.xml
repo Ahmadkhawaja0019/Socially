@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Socially">
         <activity
+            android:name=".SearchPage"
+            android:exported="false" />
+        <activity
+            android:name=".ExplorePage"
+            android:exported="false" />
+        <activity
             android:name=".HomePage"
             android:exported="false" />
         <activity

@@ -19,7 +19,8 @@ class LoginPage : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val backButton = findViewById<android.widget.ImageButton>(R.id.half_back_button)
+
+        val backButton = findViewById<android.widget.ImageButton>(R.id.back_button)
         val userName = findViewById<EditText>(R.id.userNameInput)
         val pass = findViewById<EditText>(R.id.passInput)
         val loginButton = findViewById<TextView>(R.id.loginButton)
@@ -27,12 +28,14 @@ class LoginPage : AppCompatActivity() {
 
         val receivedUsername = intent.getStringExtra("username") ?: ""
         val receivedPassword = intent.getStringExtra("password") ?: ""
+        val dpUriString = intent.getStringExtra("dpUri")
 
         userName.setText(receivedUsername)
 
         backButton.setOnClickListener {
             val intent = Intent(this, AskLoginPage::class.java)
             startActivity(intent)
+            finish()
         }
 
         loginButton.setOnClickListener {
@@ -42,6 +45,7 @@ class LoginPage : AppCompatActivity() {
             if (enteredUsername == receivedUsername && enteredPassword == receivedPassword) {
                 // Credentials match, go to HomePage
                 val intent = Intent(this, HomePage::class.java)
+                intent.putExtra("dpUri", dpUriString)
                 startActivity(intent)
                 finish()
             } else {
@@ -49,10 +53,10 @@ class LoginPage : AppCompatActivity() {
             }
         }
 
-
         signUpButton.setOnClickListener {
             val intent = Intent(this, SignupPage::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

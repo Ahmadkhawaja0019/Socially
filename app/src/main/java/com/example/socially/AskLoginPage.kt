@@ -20,6 +20,7 @@ class AskLoginPage : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         val dp = findViewById<CircleImageView>(R.id.dp)
         val userName = findViewById<TextView>(R.id.userNameText)
         val loginButton = findViewById<TextView>(R.id.loginButton)
@@ -39,12 +40,14 @@ class AskLoginPage : AppCompatActivity() {
             val intent = Intent(this, LoginPage::class.java)
             intent.putExtra("username", receivedUsername)
             intent.putExtra("password", receivedPassword)
+            intent.putExtra("dpUri", dpUriString)
             startActivity(intent)
         }
 
         signUpButton.setOnClickListener {
             val intent = Intent(this, SignupPage::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }
