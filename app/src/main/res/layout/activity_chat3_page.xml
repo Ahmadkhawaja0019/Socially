@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chat1Page"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/milkywhite"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="6dp">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/back_button_half_arrow_barkhandi"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/back_button"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/story_pic3"
+            android:layout_toRightOf="@+id/back_button"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/john"
+            android:textColor="@color/barkhandi"
+            android:layout_marginStart="12dp"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppinssemibold"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/dp"
+            android:layout_marginTop="32dp"/>
+
+        <ImageButton
+            android:id="@+id/ibutton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/button_circle_warning"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/warning"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"/>
+
+        <ImageButton
+            android:id="@+id/ic_call"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ic_call"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/calls_button"
+            android:layout_toLeftOf="@+id/ibutton"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/messageTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2:30 PM"
+        android:textSize="12sp"
+        android:textColor="@color/grey"
+        android:fontFamily="@font/poppinsregular"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/sampleMessage"
+        android:layout_marginBottom="40dp"/>
+
+    <!-- Sample message -->
+    <TextView
+        android:id="@+id/sampleMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/breakup"
+        android:background="@drawable/message_background"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinsregular"
+        android:textSize="16sp"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/bottomMessageLayout"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"/>
+
+
+    <!-- Bottom EditText Layout -->
+    <RelativeLayout
+        android:id="@+id/bottomMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/messageInput"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/textbox_background"
+            android:hint="@string/Message"
+            android:textColorHint="@color/grey"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/poppinsregular"
+            android:textSize="16sp"
+            android:paddingStart="48dp"
+            android:paddingEnd="120dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="10dp"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:gravity="center_vertical"
+            android:autofillHints="message"/>
+
+        <!-- Left side camera icon -->
+        <ImageButton
+            android:id="@+id/cameraIcon"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:src="@drawable/camera_barkhandi"
+            android:background="@android:color/transparent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:contentDescription="Camera"/>
+
+
+        <!-- Right side icons (from right to left: smiley, gallery, microphone) -->
+        <ImageButton
+            android:id="@+id/smileyIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_smiley"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Smiley"/>
+
+
+        <ImageButton
+            android:id="@+id/galleryIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/gallery"
+            android:background="@android:color/transparent"
+            android:layout_toStartOf="@+id/smileyIcon"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Gallery"/>
+
+        <ImageButton
+            android:id="@+id/microphoneIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_microphone"
+            android:background="@android:color/transparent"
+            android:layout_toStartOf="@+id/galleryIcon"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Microphone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

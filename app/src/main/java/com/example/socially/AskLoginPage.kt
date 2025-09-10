@@ -30,7 +30,11 @@ class AskLoginPage : AppCompatActivity() {
         val receivedPassword = intent.getStringExtra("pass") ?: ""
         val dpUriString = intent.getStringExtra("dpUri")
 
-        userName.text = receivedUsername
+        userName.text = if (!receivedUsername.isNullOrEmpty()) {
+            receivedUsername
+        } else {
+            getString(R.string.user_name)
+        }
 
         dpUriString?.let {
             dp.setImageURI(android.net.Uri.parse(it))

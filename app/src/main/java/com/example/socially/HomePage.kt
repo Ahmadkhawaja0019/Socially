@@ -24,13 +24,14 @@ class HomePage : AppCompatActivity() {
         val dp1 = findViewById<CircleImageView>(R.id.story_1)
         val dp2 = findViewById<CircleImageView>(R.id.profile_pic2)
         val exploreButton = findViewById<ImageButton>(R.id.nav_search)
+        val dm = findViewById<ImageButton>(R.id.inbox)
 
         val dpUriString = intent.getStringExtra("dpUri")
+        val receivedUsername = intent.getStringExtra("username")
 
         dpUriString?.let {
             dp1.setImageURI(android.net.Uri.parse(it))
         }
-
         dpUriString?.let {
             dp2.setImageURI(android.net.Uri.parse(it))
         }
@@ -38,6 +39,11 @@ class HomePage : AppCompatActivity() {
         exploreButton.setOnClickListener {
             val intent = Intent(this, ExplorePage::class.java)
             intent.putExtra("dpUri", dpUriString)
+            startActivity(intent)
+        }
+        dm.setOnClickListener {
+            val intent = Intent(this, DirectMessage::class.java)
+            intent.putExtra("username", receivedUsername)
             startActivity(intent)
         }
 

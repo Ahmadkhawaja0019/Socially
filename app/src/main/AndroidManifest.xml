@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Socially">
         <activity
+            android:name=".Chat3Page"
+            android:exported="false" />
+        <activity
+            android:name=".Chat2Page"
+            android:exported="false" />
+        <activity
+            android:name=".Chat1Page"
+            android:exported="false" />
+        <activity
+            android:name=".DirectMessage"
+            android:exported="false" />
+        <activity
+            android:name=".Chatbox"
+            android:exported="false" />
+        <activity
             android:name=".SearchPage"
             android:exported="false" />
         <activity

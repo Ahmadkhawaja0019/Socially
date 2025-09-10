@@ -65,4 +65,18 @@
     <string name="internshala_address">Internshala, B-61, Untech Zone</string>
     <string name="internshala_casmpus">internshalaincampus</string>
     <string name="hundred_post">100+ post</string>
+    <string name="joeshome">Joe Shmoe</string>
+    <string name="haveaniceday">have a nice day bro</string>
+    <string name="john">john_smith</string>
+    <string name="seeyou">See you there.</string>
+    <string name="simran">simran</string>
+    <string name="breakup">Breakup😭😭😭</string>
+    <string name="now">.now</string>
+    <string name="twodays">.2d</string>
+    <string name="camera">Camera</string>
+    <string name="joes_home">joe_shome</string>
+    <string name="calls_button">calls button</string>
+    <string name="warning">warning button</string>
+    <string name="Message">Message...</string>
+    <string name="hello">helloooo</string>
 </resources>

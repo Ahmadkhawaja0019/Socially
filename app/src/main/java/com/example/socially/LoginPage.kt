@@ -46,6 +46,7 @@ class LoginPage : AppCompatActivity() {
                 // Credentials match, go to HomePage
                 val intent = Intent(this, HomePage::class.java)
                 intent.putExtra("dpUri", dpUriString)
+                intent.putExtra("username", receivedUsername)
                 startActivity(intent)
                 finish()
             } else {
