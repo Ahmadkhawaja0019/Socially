@@ -52,4 +52,17 @@
     <string name="Auto">Auto</string>
     <string name="Music">Music</string>
     <string name="scan_button">scan button</string>
+    <string name="internshala">internshala</string>
+    <string name="clear">Clear</string>
+    <string name="top">Top</string>
+    <string name="Accounts">Accounts</string>
+    <string name="tags">Tags</string>
+    <string name="places">Places</string>
+    <string name="hash_internshala">#internshala</string>
+    <string name="thousan_post">1000+ post</string>
+    <string name="hash_internshala2">#intenshala_nomoretheory_challenge</string>
+    <string name="fivehundreed_post">500+ post</string>
+    <string name="internshala_address">Internshala, B-61, Untech Zone</string>
+    <string name="internshala_casmpus">internshalaincampus</string>
+    <string name="hundred_post">100+ post</string>
 </resources>
