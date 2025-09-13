@@ -81,4 +81,37 @@
     <string name="hello">helloooo</string>
     <string name="time">2:30</string>
     <string name="johnsmith">john</string>
+    <string name="south_korea">Seoul, South Korea</string>
+    <string name="likedbypost2">Liked by <b>simran</b> and <b>1,234 others</b></string>
+    <string name="post2_description">Amazing view from the concert! 🎤✨ <b>#concert #music #seoul</b></string>
+    <string name="Following">Following</string>
+    <string name="You">You</string>
+    <string name="notification1"><b>jackson_wang</b> started following you.</string>
+    <string name="twohours">2h</string>
+    <string name="notification2"><b>jungkook</b> liked <b>emily\'s</b> comment: <font color="#0066CC">@emily</font> nice!!</string>
+    <string name="notification3"><b>emily</b> liked 3 posts.</string>
+    <string name="notification4"><b>robin</b> liked 5 posts.</string>
+    <string name="threehours">3h</string>
+    <string name="notification5"><b>jackson_wang</b> and <b>jungkook</b> liked your post.</string>
+    <string name="notification6"><b>alex_smith</b> started following you.</string>
+    <string name="notification7"><b>emily</b> liked your comment: <font color="#0066CC">@jackson_wang</font> amazing shot!</string>
+    <string name="threedays">3d</string>
+    <string name="notification8"><b>robin</b> liked your post.</string>
+    <string name="notification9"><b>jackson_wang</b> tagged you in a post.</string>
+    <string name="followRequests">Follow Requests</string>
+    <string name="New">New</string>
+    <string name="notification11"><b>sarah_miller</b> liked your photo.</string>
+    <string name="twomin">2m</string>
+    <string name="Today">Today</string>
+    <string name="notification12"><b>mike_jones, alex_smith</b> and <b>26 others</b> liked your post.</string>
+    <string name="thisweek">This Week</string>
+    <string name="notification13"><b>emma_wilson</b> mentioned you in a comment: <font color="#0066CC">@jackson_wang</font> exactly!</string>
+    <string name="notification14"><b>david_clark</b> started following you.</string>
+    <string name="message">Message</string>
+    <string name="notification15"><b>lisa_brown</b> liked 3 posts.</string>
+    <string name="thismonth">This Month</string>
+    <string name="notification16"><b>john_doe</b> and <b>15 others</b> liked your post.</string>
+    <string name="twoweeks">2w</string>
+    <string name="notification17"><b>ryan_taylor</b> started following you.</string>
+    <string name="follow">Follow</string>
 </resources>

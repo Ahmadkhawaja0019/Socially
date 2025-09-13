@@ -25,6 +25,7 @@ class HomePage : AppCompatActivity() {
         val dp2 = findViewById<CircleImageView>(R.id.profile_pic2)
         val exploreButton = findViewById<ImageButton>(R.id.nav_search)
         val dm = findViewById<ImageButton>(R.id.inbox)
+        val notifications = findViewById<ImageButton>(R.id.nav_heart)
 
         val dpUriString = intent.getStringExtra("dpUri")
         val receivedUsername = intent.getStringExtra("username")
@@ -45,6 +46,10 @@ class HomePage : AppCompatActivity() {
         dm.setOnClickListener {
             val intent = Intent(this, DirectMessage::class.java)
             intent.putExtra("username", receivedUsername)
+            startActivity(intent)
+        }
+        notifications.setOnClickListener {
+            val intent = Intent(this, NotificationsPage1::class.java)
             startActivity(intent)
         }
 

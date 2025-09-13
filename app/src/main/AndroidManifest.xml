@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Socially">
         <activity
+            android:name=".NotificationsPage2"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationsPage1"
+            android:exported="false" />
+        <activity
             android:name=".CallPageChat3"
             android:exported="false" />
         <activity
