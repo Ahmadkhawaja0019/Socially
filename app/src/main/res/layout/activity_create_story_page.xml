@@ -151,7 +151,6 @@
         android:background="@color/black"
         android:weightSum="10">
 
-        <!-- Your Stories Button - 40% -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="48dp"
@@ -170,7 +169,6 @@
                 android:fontFamily="@font/poppinsregular"/>
         </LinearLayout>
 
-        <!-- Close Friends Button - 40% -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="48dp"
@@ -196,7 +194,6 @@
                 android:fontFamily="@font/poppinsregular"/>
         </LinearLayout>
 
-        <!-- Arrow Button - 20% -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"

@@ -2,7 +2,6 @@ package com.example.socially
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
@@ -21,7 +20,7 @@ class CreateStoryPage : AppCompatActivity() {
             insets
         }
         val postButton = findViewById<ImageView>(R.id.arrowbutton)
-        val crossButton = findViewById<ImageButton>(R.id.crossButton)
+        val crossButton = findViewById<ImageView>(R.id.crossButton)
 
         crossButton.setOnClickListener {
             finish()
