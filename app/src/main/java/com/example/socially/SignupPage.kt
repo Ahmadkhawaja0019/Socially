@@ -31,10 +31,22 @@ class SignupPage : AppCompatActivity() {
         val dateOfBirth = findViewById<EditText>(R.id.dobInput)
         val email = findViewById<EditText>(R.id.emailTextValue)
         val pass = findViewById<EditText>(R.id.passInput)
+        val togglePasswordVisibility = findViewById<android.widget.ImageView>(R.id.togglePasswordVisibility)
         val createAccountButton = findViewById<TextView>(R.id.createAccountButton)
 
         backButton.setOnClickListener {
             finishAffinity()
+        }
+
+        var isPasswordVisible = false
+        togglePasswordVisibility.setOnClickListener {
+            isPasswordVisible = !isPasswordVisible
+            if (isPasswordVisible) {
+                pass.inputType = android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+            } else {
+                pass.inputType = android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
+            }
+            pass.setSelection(pass.text.length)
         }
 
         var selectedDpUri: android.net.Uri? = null

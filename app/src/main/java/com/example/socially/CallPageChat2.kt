@@ -21,10 +21,15 @@ class CallPageChat2 : AppCompatActivity() {
         }
         val endCall = findViewById<ImageButton>(R.id.endCallButton)
 
+        val dpUriString = intent.getStringExtra("dpUri")
+        val receivedUsername = intent.getStringExtra("username")
+
         endCall.setOnClickListener {
             val intent = Intent(this@CallPageChat2, Chat2Page::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             }
+            intent.putExtra("username", receivedUsername)
+            startActivity(intent)
             startActivity(intent)
             finish()
         }
@@ -33,6 +38,8 @@ class CallPageChat2 : AppCompatActivity() {
                 val intent = Intent(this@CallPageChat2, Chat2Page::class.java).apply {
                     addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
                 }
+                intent.putExtra("username", receivedUsername)
+                startActivity(intent)
                 startActivity(intent)
                 finish()
             }

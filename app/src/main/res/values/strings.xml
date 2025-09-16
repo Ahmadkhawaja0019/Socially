@@ -114,4 +114,47 @@
     <string name="twoweeks">2w</string>
     <string name="notification17"><b>ryan_taylor</b> started following you.</string>
     <string name="follow">Follow</string>
+    <string name="fiftyfour">54</string>
+    <string name="Posts">Posts</string>
+    <string name="fivehundreed">1054</string>
+    <string name="Followers">Followers</string>
+    <string name="Jacob">Jacob West</string>
+    <string name="description">Digital goodies designer <font color="#0066CC">@pixsellz</font></string>
+    <string name="description2">Everything is designed.</string>
+    <string name="EditProfile">Edit Profile</string>
+    <string name="Friends">Friends</string>
+    <string name="Design">Design</string>
+    <string name="profilepost">Profile posts</string>
+    <string name="Cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="change_profile_photo">Change Profile photo</string>
+    <string name="Name">Name</string>
+    <string name="Ahmad_khawaja">Ahmad Khawaja</string>
+    <string name="Website">Website</string>
+    <string name="Bio">Bio</string>
+    <string name="biotext">Digital goodies designer <font color="#8F3F42">@pixsellz</font>\nEverything is designed.</string>
+    <string name="Email">Email</string>
+    <string name="myemail">khawajaahmad0019@gmail.com</string>
+    <string name="phone">Phone</string>
+    <string name="myphone">+923065666960</string>
+    <string name="Gender">Gender</string>
+    <string name="Male">Male</string>
+    <string name="proAccount">Switch to professional account</string>
+    <string name="privateInformation">Private Information</string>
+    <string name="heighlights">Highlight <font color="#8F8484"> December 2, 2024</font></string>
+    <string name="artist">Artist . Song Title ></string>
+    <string name="Activity">Activity</string>
+    <string name="Create">Create</string>
+    <string name="create_post">Post</string>
+    <string name="send">send</string>
+    <string name="more">more</string>
+    <string name="browse">Browse</string>
+    <string name="close_friends">Close Friends</string>
+    <string name="facebook">facebook</string>
+    <string name="heighlight">highlight</string>
+    <string name="recent">Recent ⌄</string>
+    <string name="next">Next</string>
+    <string name="library">Library</string>
+    <string name="photo">Photo</string>
+    <string name="video">Video</string>
 </resources>

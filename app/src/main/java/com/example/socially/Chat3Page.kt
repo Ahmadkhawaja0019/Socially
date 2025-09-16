@@ -22,10 +22,15 @@ class Chat3Page : AppCompatActivity() {
         val backButton = findViewById<ImageButton>(R.id.back_button)
         val callButton = findViewById<ImageButton>(R.id.ic_call)
 
+        val dpUriString = intent.getStringExtra("dpUri")
+        val receivedUsername = intent.getStringExtra("username")
+
         backButton.setOnClickListener {
             val intent = Intent(this@Chat3Page, DirectMessage::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             }
+            intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
             startActivity(intent)
             finish()
         }
@@ -34,12 +39,16 @@ class Chat3Page : AppCompatActivity() {
                 val intent = Intent(this@Chat3Page, DirectMessage::class.java).apply {
                     addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
                 }
+                intent.putExtra("dpUri", dpUriString)
+                intent.putExtra("username", receivedUsername)
                 startActivity(intent)
                 finish()
             }
         })
         callButton.setOnClickListener {
             val intent = Intent(this@Chat3Page, CallPageChat3::class.java)
+            intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
             startActivity(intent)
         }
     }

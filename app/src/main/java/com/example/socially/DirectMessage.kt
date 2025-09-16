@@ -27,8 +27,8 @@ class DirectMessage : AppCompatActivity() {
         val backButton = findViewById<ImageButton>(R.id.back_button)
         val userName = findViewById<TextView>(R.id.username)
 
+        val dpUriString = intent.getStringExtra("dpUri")
         val receivedUsername = intent.getStringExtra("username") ?: ""
-
         userName.text = if (!receivedUsername.isNullOrEmpty()) {
             receivedUsername
         } else {
@@ -39,27 +39,38 @@ class DirectMessage : AppCompatActivity() {
             val intent = Intent(this@DirectMessage, HomePage::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             }
+            intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
             startActivity(intent)
             finish()
         }
 
         chat1.setOnClickListener {
             val intent = android.content.Intent(this, Chat1Page::class.java)
+            intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
             startActivity(intent)
         }
         chat2.setOnClickListener {
             val intent = android.content.Intent(this, Chat2Page::class.java)
+            intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
             startActivity(intent)
         }
         chat3.setOnClickListener {
             val intent = android.content.Intent(this, Chat3Page::class.java)
+            intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
             startActivity(intent)
         }
+
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 val intent = Intent(this@DirectMessage, HomePage::class.java).apply {
                     addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
                 }
+                intent.putExtra("dpUri", dpUriString)
+                intent.putExtra("username", receivedUsername)
                 startActivity(intent)
                 finish()
             }

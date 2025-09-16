@@ -9,8 +9,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import de.hdodenhof.circleimageview.CircleImageView
+import androidx.activity.result.contract.ActivityResultContracts
+import android.provider.MediaStore
+import android.widget.FrameLayout
+import androidx.collection.CircularArray
 
 class HomePage : AppCompatActivity() {
+
+    private var cameraLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()) {
+        if (it.resultCode == RESULT_OK) {
+            val uri = it.data?.data
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -26,6 +38,10 @@ class HomePage : AppCompatActivity() {
         val exploreButton = findViewById<ImageButton>(R.id.nav_search)
         val dm = findViewById<ImageButton>(R.id.inbox)
         val notifications = findViewById<ImageButton>(R.id.nav_heart)
+        val createPost = findViewById<ImageButton>(R.id.nav_add)
+        val cameraButton = findViewById<ImageButton>(R.id.camera)
+        val jacksonStory = findViewById<CircleImageView>(R.id.story_2)
+        val story = findViewById<FrameLayout>(R.id.story)
 
         val dpUriString = intent.getStringExtra("dpUri")
         val receivedUsername = intent.getStringExtra("username")
@@ -46,10 +62,38 @@ class HomePage : AppCompatActivity() {
         dm.setOnClickListener {
             val intent = Intent(this, DirectMessage::class.java)
             intent.putExtra("username", receivedUsername)
+            intent.putExtra("dpUri", dpUriString)
             startActivity(intent)
         }
         notifications.setOnClickListener {
             val intent = Intent(this, NotificationsPage1::class.java)
+            intent.putExtra("username", receivedUsername)
+            intent.putExtra("dpUri", dpUriString)
+            startActivity(intent)
+        }
+        dp2.setOnClickListener {
+            val intent = Intent(this, ProfilePage::class.java)
+            intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
+            startActivity(intent)
+        }
+        createPost.setOnClickListener {
+            val intent = Intent(this, CreatePostPage::class.java)
+            intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
+            startActivity(intent)
+        }
+        cameraButton.setOnClickListener {
+            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            cameraLauncher.launch(intent)
+        }
+        jacksonStory.setOnClickListener {
+            val intent = Intent(this, JacksonStoryPage::class.java)
+            startActivity(intent)
+        }
+
+        story.setOnClickListener {
+            val intent = Intent(this, CreateStoryPage::class.java)
             startActivity(intent)
         }
 

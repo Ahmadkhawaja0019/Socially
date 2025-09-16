@@ -24,12 +24,21 @@ class ExplorePage : AppCompatActivity() {
         val home = findViewById<ImageButton>(R.id.nav_home)
         val dp = findViewById<CircleImageView>(R.id.profile_pic_bottom)
         val searchBar = findViewById<TextView>(R.id.searchBar)
+        val notifications = findViewById<ImageButton>(R.id.nav_heart)
+        val createPost = findViewById<ImageButton>(R.id.nav_add)
 
         val receivedUsername = intent.getStringExtra("username")
         val dpUriString = intent.getStringExtra("dpUri")
 
         dpUriString?.let {
             dp.setImageURI(android.net.Uri.parse(it))
+        }
+
+        searchBar.setOnClickListener {
+            val intent = Intent(this, SearchPage::class.java)
+            intent.putExtra("username", receivedUsername)
+            intent.putExtra("dpUri", dpUriString)
+            startActivity(intent)
         }
 
         home.setOnClickListener {
@@ -39,8 +48,23 @@ class ExplorePage : AppCompatActivity() {
             startActivity(intent)
         }
 
-        searchBar.setOnClickListener {
-            val intent = Intent(this, SearchPage::class.java)
+        notifications.setOnClickListener {
+            val intent = Intent(this, NotificationsPage1::class.java)
+            intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
+            startActivity(intent)
+        }
+
+        createPost.setOnClickListener {
+            val intent = Intent(this, CreatePostPage::class.java)
+            intent.putExtra("dpUri", dpUriString)
+            intent.putExtra("username", receivedUsername)
+            startActivity(intent)
+        }
+
+        dp.setOnClickListener {
+            val intent = Intent(this, ProfilePage::class.java)
+            intent.putExtra("dpUri", dpUriString)
             intent.putExtra("username", receivedUsername)
             startActivity(intent)
         }

@@ -291,10 +291,9 @@
         android:id="@+id/bottomCameraLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/bottomBar"
         android:orientation="horizontal"
         android:gravity="center"
-        android:padding="12dp"
         android:background="@color/white">
 
         <ImageButton
@@ -318,4 +317,12 @@
             android:layout_gravity="center"/>
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/bottomBar"
+        android:layout_width="280dp"
+        android:layout_height="16dp"
+        android:src="@drawable/bottombar_barkhandi"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="8dp"/>
 </RelativeLayout>

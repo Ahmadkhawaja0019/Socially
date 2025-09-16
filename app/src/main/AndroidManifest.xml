@@ -12,6 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Socially">
         <activity
+            android:name=".PostedStoryPage"
+            android:exported="false" />
+        <activity
+            android:name=".CreateStoryPage"
+            android:exported="false" />
+        <activity
+            android:name=".JacksonStoryPage"
+            android:exported="false" />
+        <activity
+            android:name=".CreatePostPage"
+            android:exported="false" />
+        <activity
+            android:name=".FriendsHeighlights"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfilePage"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilePage"
+            android:exported="false" />
+        <activity
             android:name=".NotificationsPage2"
             android:exported="false" />
         <activity

@@ -82,6 +82,8 @@
                 android:layout_marginStart="12dp"
                 android:orientation="vertical">
                 <FrameLayout
+
+                    android:id="@+id/story"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
                     android:background="@drawable/multicolor_border"
@@ -599,8 +601,7 @@
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:paddingBottom="10dp"
+        android:layout_above="@+id/bottomBar"
         android:background="@color/white"
         android:orientation="horizontal"
         android:weightSum="5">
@@ -653,5 +654,14 @@
             android:contentDescription="@string/profile" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bottomBar"
+        android:layout_width="280dp"
+        android:layout_height="16dp"
+        android:src="@drawable/bottombar_barkhandi"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="8dp"/>
 
 </RelativeLayout>

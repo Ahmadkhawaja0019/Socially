@@ -195,20 +195,39 @@
         android:layout_below="@+id/emailTextValue"
         android:layout_marginStart="20dp"/>
 
-    <EditText
-        android:id="@+id/passInput"
+    <RelativeLayout
+        android:id="@+id/passwordContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:hint="@string/passwordText"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/darker_gray"
-        android:fontFamily="@font/poppinsregular"
-        android:layout_marginStart="16dp"
-        android:backgroundTint="@android:color/white"
-        android:layout_marginEnd="16dp"
         android:layout_below="@id/passwordText"
-        android:inputType="textPassword"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <EditText
+            android:id="@+id/passInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:hint="@string/passwordText"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"
+            android:fontFamily="@font/poppinsregular"
+            android:backgroundTint="@android:color/white"
+            android:inputType="textPassword"
+            android:paddingEnd="48dp"/>
+
+        <ImageView
+            android:id="@+id/togglePasswordVisibility"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/eye_button"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/createAccountButton"
@@ -219,9 +238,18 @@
         android:text="@string/createAccount"
         android:textColor="@color/lightpink"
         android:fontFamily="@font/poppinssemibold"
-        android:layout_below="@+id/passInput"
+        android:layout_below="@+id/passwordContainer"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="10dp"
         android:background="@drawable/button_background_lightmehroon"/>
+
+    <ImageView
+        android:id="@+id/bottomBar"
+        android:layout_width="280dp"
+        android:layout_height="16dp"
+        android:src="@drawable/bottombar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="8dp"/>
 
 </RelativeLayout>

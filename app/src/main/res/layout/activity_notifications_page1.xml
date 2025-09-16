@@ -234,17 +234,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="12dp"
-                android:paddingVertical="8dp"
-                android:gravity="center_vertical">
+                android:paddingVertical="8dp">
 
                 <FrameLayout
                     android:layout_width="52dp"
                     android:layout_height="52dp"
+                    android:layout_marginEnd="12dp"
                     android:background="@drawable/multicolor_border"
-                    android:padding="6dp"
-                    android:layout_marginEnd="12dp">
+                    android:padding="6dp">
+
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -261,19 +262,19 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinsregular"
                         android:text="@string/notification4"
-                        android:textSize="14sp"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/poppinsregular" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/threehours"
-                        android:textSize="12sp"
-                        android:textColor="@color/grey"
+                        android:layout_marginTop="2dp"
                         android:fontFamily="@font/poppinsregular"
-                        android:layout_marginTop="2dp" />
+                        android:text="@string/threehours"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -284,36 +285,36 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/story_pic1"
+                        android:layout_marginEnd="1dp"
                         android:scaleType="centerCrop"
-                        android:layout_marginEnd="1dp" />
+                        android:src="@drawable/story_pic1" />
 
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/story_pic2"
+                        android:layout_marginEnd="1dp"
                         android:scaleType="centerCrop"
-                        android:layout_marginEnd="1dp" />
+                        android:src="@drawable/story_pic2" />
 
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/story_pic3"
+                        android:layout_marginEnd="1dp"
                         android:scaleType="centerCrop"
-                        android:layout_marginEnd="1dp" />
+                        android:src="@drawable/story_pic3" />
 
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/post"
+                        android:layout_marginEnd="1dp"
                         android:scaleType="centerCrop"
-                        android:layout_marginEnd="1dp" />
+                        android:src="@drawable/post" />
 
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/story_pic4"
-                        android:scaleType="centerCrop" />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/story_pic4" />
 
                 </LinearLayout>
 
@@ -574,8 +575,7 @@
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:paddingBottom="10dp"
+        android:layout_above="@+id/bottomBar"
         android:background="@color/white"
         android:orientation="horizontal"
         android:weightSum="5">
@@ -628,4 +628,12 @@
             android:contentDescription="@string/profile" />
 
     </LinearLayout>
+    <ImageView
+        android:id="@+id/bottomBar"
+        android:layout_width="280dp"
+        android:layout_height="16dp"
+        android:src="@drawable/bottombar_barkhandi"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="8dp"/>
 </RelativeLayout>

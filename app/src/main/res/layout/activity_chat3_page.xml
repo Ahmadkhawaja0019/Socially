@@ -107,8 +107,7 @@
         android:id="@+id/bottomMessageLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:padding="16dp"
+        android:layout_above="@+id/bottomBar"
         android:background="@color/white">
 
         <EditText
@@ -177,5 +176,13 @@
             android:contentDescription="Microphone"/>
 
     </RelativeLayout>
+    <ImageView
+        android:id="@+id/bottomBar"
+        android:layout_width="280dp"
+        android:layout_height="16dp"
+        android:src="@drawable/bottombar_barkhandi"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="8dp"/>
 
 </RelativeLayout>
